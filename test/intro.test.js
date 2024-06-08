@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { fizzBuzz, max } from '../src/intro';
+import { fizzBuzz, max, factorial } from '../src/intro';
  
 describe('max', () => {
     // 
@@ -22,4 +22,15 @@ describe('fizzBuzz', () => {
     // 
     it('should return Buzz if argument 5', () => expect(fizzBuzz(5)).toBe('Buzz'))
 
+})
+
+describe('factorial', () => {
+    // 
+    it('should return undefined if n is less than 0', () => expect(factorial(-1)).toBe(undefined));
+
+    // 
+    it('should return 1 if n is equal 1 or 0', () => expect(factorial(0) || factorial(1)).toBe(1));
+
+    // 
+    it('should return 6 if n is 3',()=> expect(factorial(3)).toBe(6))
 })
